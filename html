@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google location</title>
+</head>
+
+<body>
+
+    <div>
+        <input type="text" placeholder="Enter Pincode" id="searchme">
+        <button onclick="search()" id="btn">Search</button>
+    </div>
+
+    <!-----------------------javascript_code--------------------------------------------------------------->
+    <script>
+        const takeinput = document.querySelector("#searchme");
+
+        takeinput.addEventListener("keydown", function (event) {
+            if (event.code === "Enter") {
+                search();
+            }
+        });
+
+        function search() {
+            const input = takeinput.value;
+
+            window.location.href = "https://www.google.co.in/maps/place/" + input + "/"
+
+        }
+    </script>
+</body>
+
+</html>
